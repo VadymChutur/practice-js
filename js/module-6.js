@@ -429,40 +429,42 @@
 
 // window.navigator.geolocation.getCurrentPosition(onGetPositionSuccess, onGetPositionError);
 
-const number = [1, 2, 3, 4, 5];
+// const number = [1, 2, 3, 4, 5];
 
-const filterNumbers = (array, test) => {
-  const filterNewArray = [];
+// const filterNumbers = (array, test) => {
+//   const filterNewArray = [];
 
-  for (const number of array) {
-    // console.log(number);
-    const passed = test(number);
-    if (passed) {
-      filterNewArray.push(number);
-    }
-  }
+//   for (const number of array) {
+//     // console.log(number);
+//     const passed = test(number);
+//     if (passed) {
+//       filterNewArray.push(number);
+//     }
+//   }
 
-  return filterNewArray;
-};
+//   return filterNewArray;
+// };
 
-const r1 = filterNumbers(number, (value) => value >= 3);
-const r2 = filterNumbers(number, (value) => value <= 2);
+// const r1 = filterNumbers(number, (value) => value >= 3);
+// const r2 = filterNumbers(number, (value) => value <= 2);
 
-console.log(r1);
+// console.log(r1);
 
-console.log(r2);
+// console.log(r2);
 
-const fruits = [
-  { name: 'apples', quantity: 200, isFresh: true },
-  { name: 'grapes', quantity: 150, isFresh: false },
-  { name: 'bananas', quantity: 100, isFresh: true },
-];
+// const fruits = [
+//   { name: 'apples', quantity: 200, isFresh: true },
+//   { name: 'grapes', quantity: 150, isFresh: false },
+//   { name: 'bananas', quantity: 100, isFresh: true },
+// ];
 
-const r3 = filterNumbers(fruits, (fruit) => fruit.quantity >= 125);
-console.table(r3);
+// const r3 = filterNumbers(fruits, (fruit) => fruit.quantity >= 125);
+// console.table(r3);
 
-const r4 = filterNumbers(fruits, (fruit) => fruit.isFresh === true);
-console.table(r4);
+// const r4 = filterNumbers(fruits, (fruit) => fruit.isFresh === true);
+// console.table(r4);
 
-const r5 = filterNumbers(fruits, (fruit) => fruit.isFresh === false);
-console.table(r5);
+// const r5 = filterNumbers(fruits, (fruit) => fruit.isFresh === false);
+// console.table(r5);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
