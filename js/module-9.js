@@ -232,3 +232,19 @@
 
 // console.log(countVowel('Hello')); //2
 // console.log(countVowel('Umbrella')); //3
+
+// const navItemEl = document.querySelector('.nav__item');
+
+// console.log(navItemEl);
+
+// const navEl = document.querySelectorAll('.nav__item--link');
+
+// console.log(navEl);
+
+// const titleEl = document.createElement('h1');
+// titleEl.classList.add('page-title');
+// titleEl.textContent = 'This is a Title :)';
+// document.body.appendChild(titleEl);
+
+// console.log(titleEl);
+// console.log(document.body);
