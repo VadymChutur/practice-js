@@ -248,3 +248,201 @@
 
 // console.log(titleEl);
 // console.log(document.body);
+
+// Напишіть функцію addItemToBasket, яка буде за допомогою методу find перевіряти,
+// чи є вже такий продукт в кошику
+// Якщо він є, то потроібно оновити його в коризні
+// Якщо немає, то потрібно додати новий продукт до кошику покупок
+
+// Після цього порахувати суму всіх покупок і вивести total;
+
+// let total = 0;
+
+// const product1 = {
+//   id: 33,
+//   title: 'T-shirt',
+//   price: 99,
+//   count: 1,
+// };
+
+// const product2 = {
+//   id: 29,
+//   title: 'Jeans',
+//   price: 199,
+//   count: 1,
+// };
+
+// let basketItems = [
+//   {
+//     id: 28,
+//     title: 'iPhone 14',
+//     price: 1599,
+//     count: 3,
+//   },
+//   {
+//     id: 29,
+//     title: 'Jeans',
+//     price: 199,
+//     count: 2,
+//   },
+// ];
+
+// function addItemToBasket(product) {
+//   const activeProduct = basketItems.find((item) => item.id === product.id);
+//   if (activeProduct) {
+//     basketItems = basketItems.map((item) => {
+//       if (item.id === product.id) {
+//         return {
+//           ...item,
+//           count: item.count + 1,
+//         };
+//       } else return item;
+//     });
+//   } else basketItems.push(product);
+// }
+
+// addItemToBasket(product1);
+// addItemToBasket(product2);
+
+// console.log(basketItems);
+
+// Потрібно отримати URL адресу із адресного рядка бразуера.
+// Далі необхідно параметри запиту записати в об'єкт  (query) - ключ, значення (axios)
+
+// const url =
+//   'https://www.npmjs.com/?query=axios&version=0.3&module=render&size=32&date=12212183311';
+
+// const obj = {};
+
+// const link = new URL(url);
+// // console.log(link);
+
+// const search = link.search
+//   .slice(1)
+//   .split('&')
+//   .reduce((query, item) => {
+//     const [key, value] = item.split('=');
+//     query[key] = value;
+//     return query;
+//   }, {});
+
+// console.log(search);
+
+// Перетворіть масив об’єктів виборців на підрахунок кількості людей, які проголосували
+
+// function totalVotes(arr) {
+//   return arr.filter((item) => item.voted).length;
+// }
+
+// const voters = [
+//   { name: 'Bob', age: 30, voted: true },
+//   { name: 'Jake', age: 32, voted: true },
+//   { name: 'Kate', age: 25, voted: false },
+//   { name: 'Sam', age: 20, voted: false },
+//   { name: 'Phil', age: 21, voted: true },
+//   { name: 'Ed', age: 55, voted: true },
+//   { name: 'Tami', age: 54, voted: true },
+//   { name: 'Mary', age: 31, voted: false },
+//   { name: 'Becky', age: 43, voted: false },
+//   { name: 'Joey', age: 41, voted: true },
+//   { name: 'Jeff', age: 30, voted: true },
+//   { name: 'Zack', age: 19, voted: false },
+// ];
+
+// console.log(totalVotes(voters)); // 7
+
+// Напишіть метод, який очищає масив від усіх непотрібних елементів, таких як false, undefined, порожні рядки, нуль, null
+
+// const data = [0, 1, false, 2, undefined, '', 3, null];
+// console.log(compact(data)); // [1, 2, 3]
+
+// function compact(params) {
+//   return params.filter(Boolean);
+// }
+
+// Отримайте ініціали імені
+// Даний рядок із кількох слів із одним пробілом між кожним із них. Скоротіть назву та поверніть ініціали імені.
+
+// const input = 'George Raymond Richard Martin';
+// // Result
+// // 'GRRM'
+// function getFirstLetersName(params) {
+//   console.log(
+//     params
+//       .split(' ')
+//       .map((elem) => elem[0])
+//       .join('')
+//   );
+// }
+
+// getFirstLetersName(input);
+
+// Напишіть функцію sortByAge(users), яка приймає масив об'єктів із властивістю age та сортує їх за ним.
+// Наприклад:
+//
+// let bruce = { name: 'Bruce', age: 25 };
+// let jhon = { name: 'Jhon', age: 30 };
+// let maria = { name: 'Maria', age: 28 };
+
+// let arr = [bruce, jhon, maria];
+
+// console.table(sortByAge(arr));
+
+// // тепер: [bruce, maria, jhon]
+// // alert(arr[0].name); // Bruce
+// // alert(arr[1].name); // Maria
+// // alert(arr[2].name); // Jhon
+// console.table(arr);
+
+// function sortByAge(params) {
+//   const newArr = [...params];
+//   return newArr.sort((prev, next) => prev.age - next.age);
+// }
+
+// Маючи набір усіх елементів вашого списку бажань, обчисліть, скільки коштуватиме,
+// щоб просто купити все одразу
+
+// function shoppingSpree(arr) {
+//   // your code here
+// }
+
+// const wishlist = [
+//   { title: 'Tesla Model S', price: 90000 },
+//   { title: '4 carat diamond ring', price: 45000 },
+//   { title: 'World tour', price: 25000 },
+//   { title: 'Gold fidgit spinner', price: 2000 },
+//   { title: 'A second Tesla Model S', price: 90000 },
+// ];
+
+// console.log(calcSumWishList(wishlist)); // 227005
+
+// function calcSumWishList(params) {
+//   return params.reduce((total, { price }) => (total += price), 0);
+// }
+
+// Розробники люблять скорочувати все:
+//   k8s означає Kubernetes, a11y означає accessibility, l10n означає localization.
+//   Ви отримуєте нумероніми Dev, беручи першу та останню букви та підраховуючи кількість букв між ними.
+//   Слова, що містять менше 4 літер, не скорочуються, тому що це було б просто дивно.
+//   Змінна input  є реченням, і ви повинні скорочувати кожне слово довжиною 4 літери або більше.
+//   У реченні не буде розділових знаків. g2d l2k e6e
+
+const input = 'Every developer likes to mix kubernetes and javascript';
+// Result
+// 'E3y d7r l3s to mix k8s and j8t'
+
+function cutWords(params) {
+  return params
+    .split(' ')
+    .map((word) => {
+      const { length } = word;
+      if (word.length < 4) {
+        return word;
+      } else {
+        return `${word[0]}${length - 2}${word[length - 1]}`;
+      }
+    })
+    .join(' ');
+}
+
+console.log(cutWords(input));
