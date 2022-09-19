@@ -427,22 +427,22 @@
 //   Змінна input  є реченням, і ви повинні скорочувати кожне слово довжиною 4 літери або більше.
 //   У реченні не буде розділових знаків. g2d l2k e6e
 
-const input = 'Every developer likes to mix kubernetes and javascript';
-// Result
-// 'E3y d7r l3s to mix k8s and j8t'
+// const input = 'Every developer likes to mix kubernetes and javascript';
+// // Result
+// // 'E3y d7r l3s to mix k8s and j8t'
 
-function cutWords(params) {
-  return params
-    .split(' ')
-    .map((word) => {
-      const { length } = word;
-      if (word.length < 4) {
-        return word;
-      } else {
-        return `${word[0]}${length - 2}${word[length - 1]}`;
-      }
-    })
-    .join(' ');
-}
+// function cutWords(params) {
+//   return params
+//     .split(' ')
+//     .map((word) => {
+//       const { length } = word;
+//       if (word.length < 4) {
+//         return word;
+//       } else {
+//         return `${word[0]}${length - 2}${word[length - 1]}`;
+//       }
+//     })
+//     .join(' ');
+// }
 
-console.log(cutWords(input));
+// console.log(cutWords(input));
